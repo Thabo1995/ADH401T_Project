@@ -1,0 +1,30 @@
+package controller;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+import javax.faces.event.ActionEvent;
+
+import model.Twitter;
+
+@ManagedBean(name="twitterController")
+@SessionScoped
+public class twitterController {
+
+	@ManagedProperty(value="#{twitter}")
+	private Twitter twitter;
+	
+	public Twitter getTwitter() {
+		return twitter;
+	}
+
+	public void setTwitter(Twitter twitter) {
+		this.twitter = twitter;
+	}
+
+	public void loadTweets(){
+	   // tweets=twitterSevice.getTweets(username);
+		System.out.println("Testing button tweet");
+	    }
+	
+}

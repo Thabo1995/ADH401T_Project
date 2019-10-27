@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+
+    <title>Tweet App</title>
+    
+</h:head>
+<h:body>
+<h:form>
+<h:panelGrid columns="2" cellpadding="5">
+<h2>Twitter Management System</h2>
+<h:outputLabel value="Property:"/>
+<h:inputTextarea value="#{twittercontroller.twitter.username}" style="height :200px"></h:inputTextarea>
+<h:commandButton value="tweet" action="#{twittercontroller.loadTweets}"></h:commandButton> 
+    <ul class="list-group">
+        <li class="list-group-item"><span>Data</span></li>
+    </ul><button class="btn btn-primary" type="button">retrieve</button>
+ </h:panelGrid>
+ </h:form>
+</h:body>
+</html>

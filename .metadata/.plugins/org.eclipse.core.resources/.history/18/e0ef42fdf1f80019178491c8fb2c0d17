@@ -1,0 +1,41 @@
+package service;
+
+import java.util.List;
+
+import javax.ejb.Local;
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import model.TweetEntity;
+import twitter4j.Status;
+
+/**
+ * Session Bean implementation class TweetService
+ */
+@Stateless
+@LocalBean
+@Local
+
+/*public interface TweetService {
+	@PersistenceContext
+	//private EntityManager em;
+	
+	
+ TweetEntity postTweet(TweetEntity tweetentity);
+
+	 List<TweetEntity> retrieveTweets();
+	    
+  Status createTweet(String tweetentity);
+
+}*/
+
+public class TweetService{
+	
+	public void postTweet() {
+		
+	}
+}
+
+

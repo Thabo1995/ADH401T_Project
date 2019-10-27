@@ -1,0 +1,14 @@
+package service;
+
+import java.util.List;
+
+import model.TweetEntity;
+import twitter4j.Status;
+
+public class TweetService {
+    TweetEntity postTweet(TweetEntity tweet);
+
+    List<TweetEntity> retrieveTweets();
+    
+    Status createTweet(String TweetEntity);
+}

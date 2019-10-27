@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="emppu">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>java:/ADH401T</jta-data-source>
+		<class>EmployeeEntity.java</class>
+		
+		<properties>	
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+			<property name="hibernate.show_sql" value="true" />
+             <property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+<!-- 
+java:/MySqlDS
+java:jboss/datasource/EmpSQLDSH2
+		<properties>	
+			<property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+			<property name="hibernate.show_sql" value="true" />
+             <property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+ -->		
+	</persistence-unit>
+</persistence>
+
+<!--org.hibernate.dialect.MySQLDialect 
+
+java:jboss/datasources/ExampleDS
+
+	           <datasource jndi-name="java:jboss/datasource/EmpSQLDSH2" pool-name="EmpSQLDSH2" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:h2:file:/C:/Users/LevertK/IdeaProjects/215438910-levertkabe-assignment_01/target/db;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE</connection-url>
+                    <driver>h2</driver>
+                    <security>
+                        <user-name>sa</user-name>
+                        <password>sa</password>
+                    </security>
+                </datasource>
+                
+
+-->

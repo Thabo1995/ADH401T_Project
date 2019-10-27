@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+    <fullyQualifiedTypeName name="javax.faces.bean.SessionScoped"/>
+    <fullyQualifiedTypeName name="model.Twitter"/>
+    <fullyQualifiedTypeName name="javax.faces.bean.ManagedProperty"/>
+    <fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
+    <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+    <fullyQualifiedTypeName name="model.TwitterEntity"/>
+    <fullyQualifiedTypeName name="twitter4j.Twitter"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

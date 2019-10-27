@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="ejbModule"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_212">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/WildFly 10.x Runtime">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.ejb"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/G/Documents/214443112 Adh401T Project/MavenWebApp/WebContent/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/G/Downloads/Compressed/All Libr For Eclipse/log4j-api-2.0-beta4.jar/log4j-api-2.0-beta4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/G/Downloads/Compressed/All Libr For Eclipse/hibernate-jpa-2.1-api-1.0.0.Final/hibernate-core-4.3.8.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/G/Downloads/Compressed/All Libr For Eclipse/hibernate-jpa-2.1-api-1.0.0.Final/hibernate-c3p0-4.3.8.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/G/Downloads/Compressed/All Libr For Eclipse/hibernate-jpa-2.1-api-1.0.0.Final/hibernate-commons-annotations-4.0.5.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/G/Desktop/ADH401T/twitter4j/lib/twitter4j-core-4.0.7.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

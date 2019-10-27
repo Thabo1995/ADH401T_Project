@@ -1,0 +1,17 @@
+package service;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class TwitterEJB
+ */
+@Stateless
+@LocalBean
+public class TwitterEJB {
+
+    public TwitterEJB() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

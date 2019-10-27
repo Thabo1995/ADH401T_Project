@@ -1,0 +1,36 @@
+package controller;
+
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.SessionScoped;
+
+import model.Twitter;
+
+@ManagedBean(name="twittercontroller")
+@SessionScoped
+public class TwitterControlller {
+
+@EJB	
+TweetServiceEJB tweetservice;
+@ManagedProperty(value="#{twitter}")
+private Twitter tweet;
+
+
+public void postTweet() {
+	
+	System.out.println("testing twitter");
+	
+}
+public Twitter getTweet() {
+	return tweet;
+}
+
+public void setTweet(Twitter tweet) {
+	this.tweet = tweet;
+}
+
+
+
+
+}

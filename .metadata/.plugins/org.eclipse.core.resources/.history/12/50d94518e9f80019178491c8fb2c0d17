@@ -1,0 +1,83 @@
+package servlet;
+
+
+import java.io.IOException;
+import java.util.List;
+import java.sql.Date;
+import javax.ejb.EJB;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/post")
+public class SimpleServlet extends HttpServlet {
+
+	   private static final long serialVersionUID = 1L;
+	   
+	    @EJB
+	    private TweetService tweetService;
+	   
+	   @Override
+	   protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+	         throws ServletException, IOException {
+	      resp.setContentType("text/plain");
+	      resp.getWriter().write("Hello World! Maven Web Project Example.");
+	      System.out.println("********************************Hello World");
+/*	        String pathInfo = req.getPathInfo();
+
+	        if("home".equalsIgnoreCase(pathInfo)){
+	            req.getRequestDispatcher("/index.jsp").forward(req,resp);
+	        } else if("/retrieve".equalsIgnoreCase(pathInfo)){
+	            List<Tweet> tweetList = tweetService.retrieveTweets();
+	            req.setAttribute("tweetList", tweetList);
+	            req.getRequestDispatcher("/index.jsp").forward(req,resp);
+	        } else{
+	            throw new RuntimeException("Request Not Recognised, Please ensure your url is correct.");
+	        }*/
+
+	   }
+	   
+	    @Override
+	    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	        super.doPost(req, resp);
+	        System.out.println("*****************************************Hello World");
+	        String pathInfo = req.getPathInfo();
+
+//	        if("post".equalsIgnoreCase(pathInfo)) {
+	            TweetEntity tweet = buildTweet(req);
+	            tweet = tweetService.postTweet(tweet);
+	            req.setAttribute("tweet", tweet);
+	            req.getRequestDispatcher("index.jsp").include(req,resp);
+//	        }else{
+//	            throw new RuntimeException("Request Not Recognised, Please ensure your url is correct.");
+//	        }
+
+	/*        switch (pathInfo){
+
+	            case "/post":
+
+	                Tweet tweet = buildTweet(req);
+	                tweet = tweetService.postTweet(tweet);
+	                req.setAttribute("tweet", tweet);
+	                req.getRequestDispatcher("/jsp/tweet-feed.jsp").forward(req,resp);
+	                break;
+	            default:
+	                throw new PageNotFoundException("Request Not Recognised, Please ensure your url is correct.");
+
+	        }*/
+
+	    }
+	    
+	    private Tweet buildTweet(HttpServletRequest req) {
+
+	        String property = req.getParameter("property");
+	        String tweetBody = req.getParameter("tweetBody");
+	        Date timeStamp =  new Date(System.currentTimeMillis());
+	        return new Tweet(property, tweetBody, timeStamp);
+	    }
+
+	
+}

@@ -1,0 +1,60 @@
+package service;
+
+
+import java.util.List;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import model.TweetEntity;
+import twitter4j.Status;
+import twitter4j.Twitter;
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+import twitter4j.conf.ConfigurationBuilder;
+
+@Stateless
+public class TweetServiceImpl implements TweetService{
+
+
+    @PersistenceContext(name = "Tweet_APP_JPA")
+    EntityManager entityManager;
+
+
+    @Override
+    public TweetEntity postTweet(TweetEntity tweet) {
+    	System.out.println("***********************************************Inside Service Post Tweet");
+        entityManager.persist(tweet);
+		createTweet(tweet.getTweetBody());
+        return tweet;
+    }
+
+    @Override
+    public List<TweetEntity> retrieveTweets() {
+    	System.out.println("***********************************************Inside Service Retrieve Tweets");
+        return entityManager.createQuery("SELECT t FROM Tweet t", Tweet.class).getResultList();
+    }
+    
+    public Status createTweet(String tweet) {
+        Twitter twitter = getTwitterinstance();
+        Status status;
+		try {
+			status = twitter.updateStatus(tweet);
+		} catch (TwitterException e) {
+			throw new RuntimeException(e);
+		}
+        return status;
+    }
+    
+    private Twitter getTwitterinstance(){    
+	    ConfigurationBuilder cb = new ConfigurationBuilder();
+	    cb.setDebugEnabled(true)
+	      .setOAuthConsumerKey("YR3GjS3WEFzOwydRFSfhszr4Y")
+	      .setOAuthConsumerSecret("8JrYXtOoS3zUFgn3YDxxq7DQO8kz9A1YKsYL5ZvzRkJvdX3VAI")
+	      .setOAuthAccessToken("2471709515-W1WsWHi16DFHc7o0s5oV8pvlwV3NyyeVZ62sWpS")
+	      .setOAuthAccessTokenSecret("u5QZwZbb9gyidquNlwTWrBfMf3MfsNBrfDbQO9RSk7hdk");
+	    TwitterFactory tf = new TwitterFactory(cb.build());
+	    return tf.getInstance();
+    }
+}

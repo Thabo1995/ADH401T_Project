@@ -1,0 +1,8 @@
+package model;
+
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean(name="twitter")
+public class twitter {
+	private String username;
+}

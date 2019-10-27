@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>www.twitter2go.com</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <h1>Twitter Management System</h1>
+    <div></div><textarea style=height:200px style=width:100px></textarea><button class="btn btn-primary" type="button">tweet</button>
+    <ul class="list-group">
+        <li class="list-group-item"><span>Data</span></li>
+    </ul><button class="btn btn-primary" type="button">retrieve</button>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+package model;
+
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
+import twitter4j.conf.ConfigurationBuilder;
+
+@ManagedBean(name="twitter")
+@SessionScoped
+public class Twitter {
+	  private int tweetID;
+
+	    private String property;
+
+	    private String tweetBody;
+
+	    private Date timeStamp;
+	/*publu ic void loadTweets(ActionEvent actionEvent){
+    tweets=twitterSevice.getTweets(username);
+    }
+ */
+	public String getUsername() throws TwitterException {
+		
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public List<String> getTweets() {
+		return tweets;
+	}
+	public void setTweets(List<String> tweets) {
+		this.tweets = tweets;
+	}
+	
+}

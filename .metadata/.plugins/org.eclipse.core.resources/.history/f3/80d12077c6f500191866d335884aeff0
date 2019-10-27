@@ -1,0 +1,13 @@
+package controller;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import model.Twitter;
+
+@ManagedBean(name="twitterController")
+@SessionScoped
+public class twittercontroller {
+
+	private Twitter twitter;
+}

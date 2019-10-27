@@ -1,0 +1,19 @@
+package model;
+
+import java.util.Date;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+
+@ManagedBean(name="twitter")
+@SessionScoped
+public class Twitter {
+	  private int tweetID;
+
+	  private String property;
+
+       private String tweetBody;
+
+	    private Date timeStamp;
+	
+}
