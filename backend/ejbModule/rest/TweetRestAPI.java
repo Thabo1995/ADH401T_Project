@@ -28,7 +28,7 @@ public class TweetRestAPI{
     @Produces(MediaType.APPLICATION_JSON)
     public Response getNotification() {
         return Response.ok()
-          .entity(new TweetEntity("214443112ADH401T",new Date(System.currentTimeMillis())))
+          .entity(new TweetEntity("@AdhLecturer 214443112 ADH project",new Date(System.currentTimeMillis())))
           .build();
     }
  
